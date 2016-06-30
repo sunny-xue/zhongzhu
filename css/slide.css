@@ -6,11 +6,7 @@
     width: 530px;
     height: 233px;
     overflow: hidden;
-    margin-right: 15px;
-    left: 0px;
-    top:0px;
-    position: absolute;
-}
+   }
 
 .banner-large-img img {
     width: 530px;
@@ -18,8 +14,7 @@
 }
 
 .banner-nav {
-    height: 16px;
-    right:20px;
+    right:5px;
     bottom: 2px;
     position: absolute;
 
