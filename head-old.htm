@@ -1,0 +1,45 @@
+<div class="w1000">
+  <div id="head">
+    <div id="logo"><a href="/" title="{dede:global.cfg_indexname/}"><img src="/skin/picture/logo.jpg" alt="{dede:global.cfg_webname/}" /></a></div>
+    <div id="head_right">
+      <div id="favorite">
+        <ul>
+          <li><a href="/">返回首页</a>|</li>
+          <li><a href="javascript:void(0);" onclick="SetHome();">设为首页</a>|</li>
+          <li><a href="javascript:void(0);" onclick="AddFavorite();">添加收藏</a></li>
+        </ul>
+      </div>
+      <div class="clear"></div>
+      <div id="search">
+        <form  class="search" name="formsearch" action="/plus/search.php">
+          <input type="hidden" name="kwtype" value="0" />
+          <input class="text" type="text" name="q" placeholder="搜索一下">
+          <input class="button" value="搜索" type="submit">
+        </form>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="clear"></div>
+  <div id="navigate">
+    <ul>
+      {dede:channel  type ='top' row='7' currentstyle="
+      <li><a class='current' href='~typelink~' ~rel~>~typename~</a></li>
+      "}
+      <li><a  href='[field:typeurl/]'>[field:typename/]</a></li>
+      {/dede:channel}
+    </ul>
+  </div>
+  <div id="flash">
+    <div id="myFocus">
+      <div class="loading"></div>
+      <div class="pic">
+        <ul>
+        {dede:banner}
+{/dede:banner}
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="clear"></div>
