@@ -111,10 +111,13 @@ a:hover {
 	margin-left: 5px;
 	float: left;
 	font-size: 14px;
-	color: #c50000;
-	line-height: 30px;
+		line-height: 30px;
 	text-align: center;
 }
+.title1 a{
+color: #c50000;
+}
+
 .title1 a:hover{
 	width: 80px;
 	height: 30px;
@@ -125,7 +128,7 @@ a:hover {
 	border-radius: 3px;
 	cursor: pointer;
 }
-.title1 a.current{
+.title1 a.select{
 	width: 80px;
 	height: 30px;
 	float: left;

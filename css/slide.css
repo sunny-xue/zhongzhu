@@ -1,13 +1,12 @@
 /**banner**/
-#slidesImgs{
-    overflow: hidden;
-}
 .banner-large-img {
     width: 530px;
     height: 233px;
     overflow: hidden;
    }
-
+.banner-large-img li{
+    position: relative;
+}
 .banner-large-img img {
     width: 530px;
     height: 233px;
