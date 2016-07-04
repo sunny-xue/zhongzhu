@@ -1,21 +1,4 @@
 @charset "utf-8";
-#bg_img {
-    width: 1060px;
-    height: 330px;
-    margin: 0 auto;
-    background-image: url(/skin/image/bg.png);
-}
-
-.neirong {
-    width: 800px;
-    height: 1060px;
-    margin-top: -40px;
-    margin-left: auto;
-    margin-right: auto;
-    background-color: #fff;
-    border: solid 1px #ddd;
-    padding: 30px 80px;
-}
 
 .title2 {
     font-size: 20px;

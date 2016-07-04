@@ -41,23 +41,4 @@ function resetNavUI(){
 }
 
  SlideShow(5000, "#slideContainer", "#slidesImgs", "#banner-large-slideBar");
-
- //    nav-li hover e
-    var num;
-    $('.nav-main>li>a').hover(function(){
-     $(this).siblings().slideDown(300);
-        /*下拉框出现*/
-       
-    },function(){
-        /*下拉框消失*/
-        $(this).siblings().hide();
-    });
-//    hidden-box hover e
-    $('.title1_2_bg').hover(function(){
-      
-        $(this).show();
-    },function(){
-        $(this).slideUp(200);
-      
-    });
-});
+ });

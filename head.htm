@@ -1,27 +1,52 @@
-<!--头部开始-->
-<div class="head">
-    <div class="head_center">
-        <div class="head_left"></div>
-        <div class="head_right">
-            <ul>
-                <li class="title1"><a href='/'>企业首页</a></li>
-                {dede:channelartlist type ='top' row='7' currentstyle="
-                <li class='title1'><a class='select' href='~typelink~' ~rel~>~typename~</a></li>
-                "}
-                <li class="title1"><a href='[field:typeurl/]'>[field:typename/]</a> 
-                {dede:channel type='son' noself='yes'}
-                    <ul class="hide title1_2_bg">
-                        <li class="title1_2"><a href="[field:typelink/]">[field:typename/]</a></li>
+ <!--头部开始-->
+    <div class="clearfix">
+        <!--头部开始-->
+        <div class="head">
+            <div class="head_center">
+                <div class="head_left"></div>
+                <div class="head_right">
+                    <ul  class="nav-main">
+                        <li class="title1"><a href='/'>企业首页</a></li>
+                        {dede:channelartlist type ='top' row='7' currentstyle="
+                        <li class='title1'><a class='select' href='~typelink~' ~rel~>~typename~</a></li>
+                        "}
+                        <li class="title1"><a href='{dede:field name="typeurl"/}'>{dede:field name="typename"/}</a>
+                            <ul class="hide title1_2_bg">
+                                {dede:channel type="son"}
+                                <li class="title1_2"><a href="[field:typeurl/]">[field:typename/]</a></li>
+                                {/dede:channel}
+                            </ul>
+                        </li>
+                        {/dede:channelartlist}
                     </ul>
-                {/dede:channel}
-                </li>
-                {/dede:channelartlist}
-            </ul>
+                </div>
+            </div>
         </div>
+        <div class="line1"></div>
+        <!--头部结束-->
+        <!--背景图片开始-->
+        <div id="bg_img"></div>
+        <!--背景图片结束-->
+        <!--头部结束-->
     </div>
-</div>
-<div class="line1"></div>
-<!--头部结束-->
-<!--背景图片开始-->
-<div id="bg_img"></div>
-<!--背景图片结束-->
+      <script type="text/javascript" src="/skin/js/jquery-2.1.4.min.js"></script>
+    <script type="text/javascript">
+      //    nav-li hover e
+    var num;
+    $('.nav-main>li>a').hover(function(){
+     $(this).siblings().slideDown(300);
+        /*下拉框出现*/
+       
+    },function(){
+        /*下拉框消失*/
+        $(this).siblings().hide();
+    });
+//    hidden-box hover e
+    $('.title1_2_bg').hover(function(){
+      
+        $(this).show();
+    },function(){
+        $(this).slideUp(200);
+      
+    });
+    </script>

@@ -128,6 +128,13 @@ a:hover {
 
 
 /*header*/
+#bg_img {
+    width: 1060px;
+    height: 330px;
+    margin: 0 auto;
+    background-image: url(/skin/image/bg.png);
+}
+
 
 .head {
     height: 56px;
@@ -178,7 +185,7 @@ a:hover {
 }
 
 .title1_2_bg {
-    border: 1px solid #c50000;
+    border: none;
     background-color: #FFFFFF;
 }
 
@@ -343,4 +350,15 @@ a:hover {
 
 .inline-block {
     display: inline-block;
+}
+
+.neirong {
+    width: 800px;
+    height: 1060px;
+    margin-top: -40px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #fff;
+    border: solid 1px #ddd;
+    padding: 30px 80px;
 }

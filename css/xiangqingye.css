@@ -17,7 +17,7 @@
 	width: 170px;
 	height: 56px;
 	float: left;
-	background-image: url(../image/logo.png);
+	background-image: url(/skin/image/logo.png);
 }
 .head_right{
 	width: 600px;
@@ -61,7 +61,7 @@
 	width: 1060px;
 	height: 330px;
 	margin: 0 auto;
-	background-image: url(../image/bg.png);
+	background-image: url(/skin/image/bg.png);
 }
 .neirong{
 	width: 960px;
@@ -86,7 +86,7 @@
 	width: 220px;
 	line-height: 80px;
 	text-align: center;
-	background-image: url(../image/pic12.png);
+	background-image: url(/skin/image/pic12.png);
 	background-repeat: repeat-x;
 }
 .title3{
@@ -98,7 +98,7 @@
 	height: 38px;
 	line-height: 37px;
 	border-bottom: dashed 1px #ddd;
-	background-image: url(../image/arrow.png);
+	background-image: url(/skin/image/arrow.png);
 	background-repeat: no-repeat;
 	background-position: 60px 50%;
 	cursor: pointer;
@@ -112,7 +112,7 @@
 	height: 38px;
 	line-height: 37px;
 	border-bottom: dashed 1px #ddd;
-	background-image: url(../image/arrow1.png);
+	background-image: url(/skin/image/arrow1.png);
 	background-repeat: no-repeat;
 	background-position: 60px 50%;
 }
@@ -125,7 +125,7 @@
 	height: 38px;
 	line-height: 37px;
 	border-bottom: dashed 1px #ddd;
-	background-image: url(../image/arrow1.png);
+	background-image: url(/skin/image/arrow1.png);
 	background-repeat: no-repeat;
 	background-position: 60px 50%;
 	cursor: pointer;
