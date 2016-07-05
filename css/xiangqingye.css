@@ -1,82 +1,8 @@
 @charset "utf-8";
-.head{
-	height: 56px;
-	background-color: #f7f7f7;
-}
-.line1{
-	height: 4px;
-	background-color: #2a2a2a;
-}
-.head_center{
-	height: 56px;
-	width: 960px;
-	margin: 0 auto;
-	float: none;
-}
-.head_left{
-	width: 170px;
-	height: 56px;
-	float: left;
-	background-image: url(/skin/image/logo.png);
-}
-.head_right{
-	width: 600px;
-	height: 43px;
-	float: left;
-	padding-top: 13px;
-	padding-left: 190px;
-}
-.title1{
-	width: 80px;
-	height: 30px;
-	margin-left: 5px;
-	float: left;
-	font-size: 14px;
-	color: #c50000;
-	line-height: 30px;
-	text-align: center;
-}
-.title1 a:hover{
-	width: 80px;
-	height: 30px;
-	float: left;
-	font-size: 14px;
-	color: #ffffff;
-	background-color: #c50000;
-	border-radius: 3px;
-	cursor: pointer;
-}
-.title1 a.select{
-	width: 80px;
-	height: 30px;
-	float: left;
-	font-size: 14px;
-	color: #ffffff;
-	background-color: #c50000;
-	border-radius: 3px;
-	cursor: pointer;
-}
-
-#bg_img{
-	width: 1060px;
-	height: 330px;
-	margin: 0 auto;
-	background-image: url(/skin/image/bg.png);
-}
-.neirong{
-	width: 960px;
-	height: 1000px;
-	margin-top: -40px;
-	margin-left: auto;
-	margin-right: auto;
-	background-color: #fff;
-	border: solid 1px #ddd;
-}
 .left{
 	width: 220px;
-	height: 1000px;
-	float: left;
-	border-right: solid 1px #ddd;
+
+
 }
 .title2{
 	font-size: 20px;
@@ -131,8 +57,7 @@
 	cursor: pointer;
 }
 .right{
-	width: 639px;
-	height: 1000px;
+	height: 100%;
 	float: left;
 	padding-left: 50px;
 	padding-right: 50px;
@@ -152,10 +77,10 @@
 	cursor: pointer;
 }
 .liebiao{
-	width: 639px;
-	height: 80px;
+	width: 100%;
+	height: 50px;
 	float: left;
-	border-bottom: dashed 1px #dddddd;
+	
 	font-size: 20px;
 	color: #333333;
 	line-height: 80px;
@@ -163,14 +88,15 @@
 	margin-bottom: 20px;
 }
 .text{
-	width: 639px;
+	width: 100%;
+	height: 100%;
 	font-size: 12px;
 	color: #666666;
 	line-height: 24px;
 	float: left;
+	margin-bottom: 20px;
 }
 .pic{
-	width: 639px;
 	float: left;
 	margin-top: 30px;
 }
@@ -199,4 +125,7 @@
 	line-height: 40px;
 	float: right;
 	color: #ffffff;
+}
+.neirong{
+	padding-bottom: 0px;padding-left: 0px;padding-right: 50px;
 }
