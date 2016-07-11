@@ -128,14 +128,6 @@ a:hover {
 
 
 /*header*/
-#bg_img {
-    width: 1060px;
-    height: 330px;
-    margin: 0 auto;
-    background-image: url(/skin/image/bg.png);
-}
-
-
 .head {
     height: 56px;
     background-color: #f7f7f7;

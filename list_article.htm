@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
+<htmld>
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -15,28 +15,31 @@
     {dede:include filename="head.htm"/}
     <!--内容区开始-->
     <div class="neirong">
-        <div class="left">
-            <div class="title2">{dede:field.typename/}</div>
-            {dede:channel type ='son'}
-            <div class="title3"><a href='[field:typelink/]' title='[field:typename/]'>[field:typename/]</a></div>
-            {/dede:channel}
-        </div>
-        <div class="right">
-            <div class="adress">{dede:field name='position'/}</div>
-            <div class="clearfix">
-                {dede:arclist row='10' titlelen='24' orderby='pubdate'}
-                <div class="liebiao">
-                    <div class="pic">[field:imglink/]</div>
-                    <div class="title4"><a href="[field:filename/]">[field:title/]</a></div>
-                    <div class="date">[field:pubdate function="MyDate('Y-m-d H:i',@me)/]</div>
-                    <div class="text">[field:info/]</div>
-                </div>
-                {/dede:arclist}
-                <hr/>
-                <div class="pages">
-                    <ul>
-                        {dede:pagelist listitem="info,index,end,pre,next,pageno" listsize="5"/}
-                    </ul>
+        <div class="clearfix">
+            <div class="left">
+                <div class="title2">{dede:field.typename/}</div>
+                {dede:channel type ='son'}
+                <div class="title3"><a href='[field:typelink/]' title='[field:typename/]'>[field:typename/]</a></div>
+                {/dede:channel}
+            </div>
+            <div class="cell" style="padding-left: 50px;padding-bottom: 10px; border-left: 1px solid #ddd;height: 100%;">
+                <div class="adress">{dede:field name='position'/}</div>
+                <div class="clearfix">
+                    {dede:arclist row='8' titlelen='24' orderby='pubdate'}
+                    <div class="liebiao">
+                        <div class="pic">[field:imglink/]</div>
+                        <div class="left">
+                        <div class="title4"><a href="[field:filename/]">[field:title/]</a></div>
+                        <div class="date">[field:pubdate function="MyDate('Y-m-d H:i',@me)/]</div>
+                        <div class="text">[field:info/]</div></div>
+                    </div>
+                    {/dede:arclist}
+                    <hr/>
+                    <div class="pages">
+                        <ul>
+                            {dede:pagelist listitem="info,index,end,pre,next,pageno" listsize="5"/}
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>

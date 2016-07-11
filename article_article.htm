@@ -1,5 +1,5 @@
-<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
+`<!DOCTYPE html>
+<html>
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -29,11 +29,11 @@
                     </div>
                     <div class="txt-algin-center" style="border-bottom: dashed 1px #dddddd;padding-bottom: 10px;"><span>来源：{dede:field.source/}</span> <span>作者：{dede:field.writer/}</span> <span>日期：{dede:field.pubdate function="MyDate('Y-m-d H:i',@me)"/}</span></div>
                 </div>
-                <div class="text">{dede:field.body/}
+                <div class="clearfix">
+                     <div class="text">{dede:field.body/}</div>
+                <div class="right">{dede:prenext get='pre'/}<br/>{dede:prenext get='next'/}</div>
                 </div>
-                <div class="txt-algin-right">{dede:prenext get='pre'/}
-                    <br />{dede:prenext get='next'/}
-                </div>
+               
             </div>
         </div>
     </div>
