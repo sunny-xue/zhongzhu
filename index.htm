@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset={dede:global.cfg_soft_lang/}" />
     <title>{dede:global.cfg_webname/}</title>
     <meta name="description" content="{dede:global.cfg_description/}" />
     <meta name="keywords" content="{dede:global.cfg_keywords/}" />
@@ -12,8 +12,9 @@
     <script type="text/javascript" src="/skin/js/jquery-2.1.4.min.js"></script>
     <script src="/skin/js/slideshow.js" type="text/javascript"></script>
     <script src="/skin/js/home.js" type="text/javascript"></script>
-    <script type="text/javascript" src="/skin/js/uaredirect.js"></script>
-</head>
+    <meta http-equiv="mobile-agent" content="format=xhtml;url={dede:global.cfg_mobileurl/}/index.php">
+<script type="text/javascript">if(window.location.toString().indexOf('pref=padindex') != -1){}else{if(/AppleWebKit.*Mobile/i.test(navigator.userAgent) || (/MIDP|SymbianOS|NOKIA|SAMSUNG|LG|NEC|TCL|Alcatel|BIRD|DBTEL|Dopod|PHILIPS|HAIER|LENOVO|MOT-|Nokia|SonyEricsson|SIE-|Amoi|ZTE/.test(navigator.userAgent))){if(window.location.href.indexOf("?mobile")<0){try{if(/Android|Windows Phone|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)){window.location.href="{dede:global.cfg_mobileurl/}/index.php";}else if(/iPad/i.test(navigator.userAgent)){}else{}}catch(e){}}}}</script>
+    </head>
 
 <body>
     <!--头部开始-->
