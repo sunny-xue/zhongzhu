@@ -1,6 +1,6 @@
 @charset "utf-8";
 
-.title2 {
+.title2_home {
     font-size: 20px;
     color: #c52d2f;
     float: left;
@@ -8,7 +8,7 @@
     line-height: 19px;
 }
 
-.title3 {
+.title3_home {
     font-size: 12px;
     color: #777777;
     float: left;

@@ -41,11 +41,12 @@
                 <div style="margin-bottom: 20px;">
                     <div class="liebiao">{dede:field.title/}
                     </div>
-                    <div class="txt-algin-center" style="border-bottom: dashed 1px #dddddd;padding-bottom: 10px;"><span>作者：{dede:field.writer/}</span> <span>发布时间：{dede:field.pubdate function="MyDate('Y-m-d H:i',@me)"/}</span></div>
+                    <div class="txt-algin-center" style="border-bottom: dashed 1px #dddddd;padding-bottom: 10px;"><span>来源：{dede:field.source/}</span> <span>作者：{dede:field.writer/}</span> <span>日期：{dede:field.pubdate function="MyDate('Y-m-d H:i',@me)"/}</span></div>
                 </div>
                 <div class="clearfix">
                     <div class="text">{dede:field.body/}</div>
-                    <div class="right">{dede:prenext/}</div>
+                    <div class="right">{dede:prenext get='pre'/}
+                        <br/>{dede:prenext get='next'/}</div>
                 </div>
             </div>
         </div>

@@ -25,20 +25,20 @@
             </div>
             <div class="cell textArea">
                 <div class="adress">{dede:field name='position'/}</div>
-                <div class="clearfix">
-                    {dede:arclist row='8' titlelen='24' orderby='pubdate'}
-                    <div class="liebiao">
+                <div class="clearfix" style="min-height: 565px;">
+                    {dede:list pagesize='6' titlelen='140' infolen='240' imgwidth='85' imgheight='85' orderby='pubdate'}
+                    <div class="liebiao clearfix">
                         <div class="pic">[field:imglink/]</div>
-                        <div class="left">
+                        <div class="cell">
                         <div class="title4"><a href="[field:filename/]">[field:title/]</a></div>
-                        <div class="date">[field:pubdate function="MyDate('Y-m-d H:i',@me)/]</div>
-                        <div class="text">[field:info/]</div></div>
+                        <div class="date">[field:stime/]</div>
+                        <div class="text">[field:description/]<a href="[field:filename/]" style="margin-left: 2px;" title="更多">......</a></div></div>
                     </div>
-                    {/dede:arclist}
+                    {/dede:list}
                     <hr/>
                     <div class="pages">
                         <ul>
-                            {dede:pagelist listitem="info,index,end,pre,next,pageno" listsize="5"/}
+                            {dede:pagelist listitem='info,index,end,pre,next,pageno' listsize='5'/}
                         </ul>
                     </div>
                 </div>

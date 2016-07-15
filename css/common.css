@@ -345,6 +345,7 @@ a:hover {
     display: inline-block;
 }
 
+
 .neirong {
     width: 800px;
     height: 100%;
@@ -359,6 +360,7 @@ a:hover {
 
 .leftNav {
     min-height: 660px;
+    width: 220px;
 }
 
 .textArea {
@@ -367,4 +369,68 @@ a:hover {
     padding-bottom: 10px;
     height: 100%;
     border-left: 1px solid #ddd;
+}
+
+.title2{
+    font-size: 20px;
+    color: #c52d2f;
+    float: left;
+    height: 80px;
+    width: 220px;
+    line-height: 80px;
+    text-align: center;
+    background-image: url(../image/pic12.png);
+    background-repeat: repeat-x;
+}
+.title3{
+    font-size: 14px;
+    color: #666666;
+    float: left;
+    padding-left: 90px;
+    width: 130px;
+    height: 38px;
+    line-height: 37px;
+    border-bottom: dashed 1px #ddd;
+    background-image: url(../image/arrow.png);
+    background-repeat: no-repeat;
+    background-position: 60px 50%;
+}
+.title3:hover{
+    color: #ffffff;
+    background-color: #c52d2f;
+    float: left;
+    padding-left: 90px;
+    width: 130px;
+    height: 38px;
+    line-height: 37px;
+    border-bottom: dashed 1px #ddd;
+    background-image: url(../image/arrow1.png);
+    background-repeat: no-repeat;
+    background-position: 60px 50%;
+}
+.select1{
+    color: #ffffff;
+    background-color: #c52d2f;
+    float: left;
+    padding-left: 90px;
+    width: 130px;
+    height: 38px;
+    line-height: 37px;
+    border-bottom: dashed 1px #ddd;
+    background-image: url(../image/arrow1.png);
+    background-repeat: no-repeat;
+    background-position: 60px 50%;
+}
+.adress{
+    width: 100%;
+    height: 28px;
+    border-bottom: solid 2px #c52d2f;
+    font-size: 12px;
+    text-align: right;
+    color: #666;
+    padding-top: 50px;
+}
+.adress a:hover{
+    color: #c52d2f;
+    cursor: pointer;
 }
