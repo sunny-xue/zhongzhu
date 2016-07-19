@@ -19,6 +19,9 @@
 	min-height: 550px;
 	margin-bottom: 20px;
 }
+.text img{
+	max-width: 630px;
+}
 .pic{
 	float: left;
 	margin-top: 30px;

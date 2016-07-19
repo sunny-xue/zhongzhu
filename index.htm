@@ -91,15 +91,16 @@
                 </div>
                 <div class="banner-nav" id="banner-large-slideBar">
                     <ul>
-                        <li value="1" class="on">1</li>
-                        <li value="2" class="">2</li>
+                        {dede:arclist flag='f' limit='4'}
+                        <li value="[field:global.autoindex/]" class="[field:global.autoindex runphp='yes']if(@me == 1){@me='on';}else{@me='';}[/field:global.autoindex]">[field:global.autoindex/]</li>
+                        {/dede:arclist}
                     </ul>
                 </div>
             </div>
             <div class="cell" style="width:214px;">
                 <div class="pic1"></div>
                 <div class="line2"></div>
-                {dede:arclist limit='3'}
+                {dede:arclist limit='3' titlelen="50"}
                 <div class="news-title">
                     <a href='[field:arcurl/]'>[field:title/]</a>
                     <div class="date">[field:stime/]</div>
@@ -114,7 +115,7 @@
                     <div class="title4">集团简介</div>
                     <div class="zhengwen">
                         {dede:sql sql='Select typedir,content from dede_arctype where id=35'}
-                        <a href="/pages/zoujinzhongzhu/jituanjianjie"> [field:content/]</a> {/dede:sql}
+                        <a href="/pages/zoujinzhongzhu/jituanjianjie"> [field:content function=' ( strlen("@me")>260 ? cn_substr(html2text("@me"),260)."..." : "@me" ) '/]</a> {/dede:sql}
                     </div>
                 </div>
                 <!--集团简介结束-->
@@ -131,7 +132,7 @@
                     <div class="title4">董事长致辞</div>
                     {dede:sql sql='Select typedir,content from dede_arctype where id=36'}
                     <div class="zhici-pic"><img src="/skins/image/zhici.png" width="112" height="107"></div>
-                    <div class="zhici-bg"> <a href="/pages/zoujinzhongzhu/dongshichangzhici">[field:content/] </a></div>
+                    <div class="zhici-bg"> <a href="/pages/zoujinzhongzhu/dongshichangzhici">[field:content function=' ( strlen("@me")>60 ? cn_substr(html2text("@me"),60)."..." : "@me" ) '/] </a></div>
                     <div class="name">--董事长</div>
                     {/dede:sql}
                 </div>
@@ -165,24 +166,21 @@
                     <div style="margin-top: 25px;height: 200px;">
                         <div id="fczy">
                             {dede:arclist limit='3' type='image' typeid='45' imgwidth='250' imgheight='200' orderby='pubdate'}
-                            <div class="xiangmu" [field:global.autoindex runphp='yes' ] if(@me >2){ @me='style="margin-right:0px;"' ; }else { @me="" ;} [/field:global.autoindex]>
-                                [field:imglink/]
+                            <div class="xiangmu" [field:global.autoindex runphp='yes' ] if(@me>2){ @me='style="margin-right:0px;"' ; }else { @me="" ;} [/field:global.autoindex]> [field:imglink/]
                                 <div class="xiangmu-bg">[field:title/]</div>
                             </div>
                             {/dede:arclist}
                         </div>
                         <div id="zcgl" style="display:none;">
                             {dede:arclist limit='3' type='image' typeid='46' imgwidth='250' imgheight='200' orderby='pubdate'}
-                            <div class="xiangmu" [field:global.autoindex runphp='yes' ] if(@me >2){ @me='style="margin-right:0px;"' ; }else { @me="" ;} [/field:global.autoindex]>
-                                [field:imglink/]
+                            <div class="xiangmu" [field:global.autoindex runphp='yes' ] if(@me>2){ @me='style="margin-right:0px;"' ; }else { @me="" ;} [/field:global.autoindex]> [field:imglink/]
                                 <div class="xiangmu-bg">[field:title/]</div>
                             </div>
                             {/dede:arclist}
                         </div>
                         <div id="wyfw" style="display:none;">
                             {dede:arclist limit='3' type='image' typeid='47' imgwidth='250' imgheight='200' orderby='pubdate'}
-                            <div class="xiangmu" [field:global.autoindex runphp='yes' ] if(@me >2){ @me='style="margin-right:0px;"' ; }else { @me="" ;} [/field:global.autoindex]>
-                                [field:imglink/]
+                            <div class="xiangmu" [field:global.autoindex runphp='yes' ] if(@me>2){ @me='style="margin-right:0px;"' ; }else { @me="" ;} [/field:global.autoindex]> [field:imglink/]
                                 <div class="xiangmu-bg">[field:title/]</div>
                             </div>
                             {/dede:arclist}
@@ -263,7 +261,7 @@
                     </div>
                 </div>
                 {dede:sql sql='select content from dede_arctype where id=55'}
-                <div>[field:content/]</div>
+                <div class="inf">[field:content/]</div>
                 {/dede:sql}
             </div>
         </div>
