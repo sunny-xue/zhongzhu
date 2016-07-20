@@ -122,7 +122,7 @@
                 <!--行业资讯开始-->
                 <div class="zixun-box">
                     <div class="title4">行业资讯</div>
-                    {dede:arclist limit='5' typeid='27'}
+                    {dede:arclist limit='5' typeid='42'}
                     <div class="zixun"><a href='[field:arcurl/]'>>&nbsp;&nbsp;[field:title/]</a></div>
                     {/dede:arclist}
                 </div>
@@ -230,24 +230,11 @@
                     </div>
                 </div>
                 <div class="konggu">
+                    {dede:arclist typeid='38' imgwidth='108' imgheight='86'}
                     <div class="company-logo">
-                        <a><img src="skin/image/pic8.png"></a>
+                        [field:imglink/]
                     </div>
-                    <div class="company-logo">
-                        <img src="skin/image/pic9.png">
-                    </div>
-                    <div class="company-logo">
-                        <img src="skin/image/pic10.png">
-                    </div>
-                    <div class="company-logo">
-                        <img src="skin/image/pic11.png">
-                    </div>
-                    <div class="company-logo">
-                        <img src="skin/image/pic8.png">
-                    </div>
-                    <div class="company-logo">
-                        <img src="skin/image/pic9.png">
-                    </div>
+                    {/dede:arclist}
                 </div>
             </div>
             <!--控股企业结束-->
@@ -260,9 +247,12 @@
                         <div class="line7"></div>
                     </div>
                 </div>
-                {dede:sql sql='select content from dede_arctype where id=55'}
-                <div class="inf">[field:content/]</div>
-                {/dede:sql}
+                <div class="inf">地址：南京市中山南路189号</div>
+                <div class="inf">电话：025-85394277</div>
+                <div class="inf">传真：025-85394177</div>
+                <div class="inf">微信：
+                    <div class="erweima"><img src="/skin/image/erweima.png" width="93" height="93"></div>
+                </div>
             </div>
         </div>
         <!--联系我们结束-->
