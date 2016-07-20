@@ -806,8 +806,8 @@ class Archives
         {
             $aid = $this->ArcID;
             $aid_pubdate_r = $this->dsql->GetOne("Select sortrank From `#@__arctiny` where id=$aid");
-            $preR =  $this->dsql->GetOne("Select id From `#@__arctiny` where sortrank>{$aid_pubdate_r['sortrank']} And arcrank>-1 And typeid='{$this->Fields['typeid']}' order by sortrank asc");
-            $nextR = $this->dsql->GetOne("Select id From `#@__arctiny` where sortrank<{$aid_pubdate_r['sortrank']} And arcrank>-1 And typeid='{$this->Fields['typeid']}' order by sortrank desc");
+            $preR =  $this->dsql->GetOne("Select id From `#@__arctiny` where sortrank>={$aid_pubdate_r['sortrank']} And arcrank>-1 And typeid='{$this->Fields['typeid']}' And id != $aid order by sortrank asc");
+            $nextR = $this->dsql->GetOne("Select id From `#@__arctiny` where sortrank<={$aid_pubdate_r['sortrank']} And arcrank>-1 And typeid='{$this->Fields['typeid']}' And id != $aid order by sortrank desc");
             $next = (is_array($nextR) ? " where arc.id={$nextR['id']} " : ' where 1>2 ');
             $pre = (is_array($preR) ? " where arc.id={$preR['id']} " : ' where 1>2 ');
             $query = "Select arc.id,arc.title,arc.shorttitle,arc.typeid,arc.ismake,arc.senddate,arc.arcrank,arc.money,arc.filename,arc.litpic,
