@@ -805,9 +805,8 @@ class Archives
         if(count($this->PreNext)<2)
         {
             $aid = $this->ArcID;
-            $aid_pubdate_r = $this->dsql->GetOne("Select sortrank From `#@__arctiny` where id=$aid");
-            $preR =  $this->dsql->GetOne("Select id From `#@__arctiny` where sortrank>{$aid_pubdate_r['sortrank']} And arcrank>-1 And typeid='{$this->Fields['typeid']}' order by sortrank asc");
-            $nextR = $this->dsql->GetOne("Select id From `#@__arctiny` where sortrank<{$aid_pubdate_r['sortrank']} And arcrank>-1 And typeid='{$this->Fields['typeid']}' order by sortrank desc");
+            $preR =  $this->dsql->GetOne("Select id From `#@__arctiny` where id>$aid And arcrank>-1 And typeid='{$this->Fields['typeid']}' order by id asc");
+            $nextR = $this->dsql->GetOne("Select id From `#@__arctiny` where id<$aid And arcrank>-1 And typeid='{$this->Fields['typeid']}' order by id desc");
             $next = (is_array($nextR) ? " where arc.id={$nextR['id']} " : ' where 1>2 ');
             $pre = (is_array($preR) ? " where arc.id={$preR['id']} " : ' where 1>2 ');
             $query = "Select arc.id,arc.title,arc.shorttitle,arc.typeid,arc.ismake,arc.senddate,arc.arcrank,arc.money,arc.filename,arc.litpic,
@@ -819,7 +818,6 @@ class Archives
             {
                 $mlink = GetFileUrl($preRow['id'],$preRow['typeid'],$preRow['senddate'],$preRow['title'],$preRow['ismake'],$preRow['arcrank'],
                 $preRow['namerule'],$preRow['typedir'],$preRow['money'],$preRow['filename'],$preRow['moresite'],$preRow['siteurl'],$preRow['sitepath']);
-                $preRow['title']=cn_substr($preRow['title'],30);
                 $this->PreNext['pre'] = "上一篇：<a href='$mlink'>{$preRow['title']}</a> ";
                 $this->PreNext['preimg'] = "<a href='$mlink'><img src=\"{$preRow['litpic']}\" alt=\"{$preRow['title']}\"/></a> "; 
             }
@@ -832,7 +830,6 @@ class Archives
             {
                 $mlink = GetFileUrl($nextRow['id'],$nextRow['typeid'],$nextRow['senddate'],$nextRow['title'],$nextRow['ismake'],$nextRow['arcrank'],
                 $nextRow['namerule'],$nextRow['typedir'],$nextRow['money'],$nextRow['filename'],$nextRow['moresite'],$nextRow['siteurl'],$nextRow['sitepath']);
-                $nextRow['title']=cn_substr($nextRow['title'],30);
                 $this->PreNext['next'] = "下一篇：<a href='$mlink'>{$nextRow['title']}</a> ";
                 $this->PreNext['nextimg'] = "<a href='$mlink'><img src=\"{$nextRow['litpic']}\" alt=\"{$nextRow['title']}\"/></a> ";
             }
