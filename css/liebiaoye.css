@@ -24,8 +24,6 @@
 	line-height: 14px;
 	display: inline-block;
 	overflow: hidden;
-	text-overflow: ellipsis;
-	white-space: nowrap;
 	margin-bottom: 10px;
 }
 .date{

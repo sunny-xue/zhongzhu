@@ -408,6 +408,9 @@ a:hover {
     background-repeat: no-repeat;
     background-position: 60px 50%;
 }
+.title3 a:hover{
+      color: #ffffff;
+}
 .select1{
     color: #ffffff;
     background-color: #c52d2f;

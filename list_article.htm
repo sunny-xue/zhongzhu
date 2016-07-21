@@ -26,13 +26,13 @@
             <div class="cell textArea">
                 <div class="adress">{dede:field name='position'/}</div>
                 <div class="clearfix" style="min-height: 565px;">
-                    {dede:list pagesize='6' titlelen='140' infolen='240' imgwidth='85' imgheight='85' orderby='pubdate'}
+                    {dede:list pagesize='6' infolen='240' imgwidth='85' imgheight='85'}
                     <div class="liebiao clearfix">
                         <div class="pic">[field:imglink/]</div>
                         <div class="cell">
-                        <div class="title4"><a href="[field:filename/]">[field:title/]</a></div>
-                        <div class="date">[field:stime/]</div>
-                        <div class="text">[field:description/]<a href="[field:filename/]" style="margin-left: 2px;" title="更多">......</a></div></div>
+                        <div class="title4"><a href="[field:filename/]">[field:title  function=' ( strlen(Html2Text("@me"))>120 ? cn_substr(html2text("@me"),120)."..." : Html2Text("@me")) '/]</a></div>
+                        <div class="date">[field:senddate function="MyDate('Y-m-d',@me)"/]</div>
+                        <div class="text">[field:description function='Html2Text(@me)'/]<a href="[field:filename/]" style="margin-left: 2px;" title="更多">......</a></div></div>
                     </div>
                     {/dede:list}
                     <hr/>

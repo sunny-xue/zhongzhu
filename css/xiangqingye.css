@@ -1,12 +1,11 @@
 @charset "utf-8";
 .liebiao{
 	width: 100%;
-	height: 50px;
 	float: left;
 	
 	font-size: 20px;
 	color: #333333;
-	line-height: 80px;
+	padding-top:30px;
 	text-align: center;
 	margin-bottom: 20px;
 }
@@ -22,6 +21,15 @@
 .text img{
 	max-width: 600px;
 }
+
+/**针对老数据 隐藏多标题*/
+.text strong:first-child{
+	display: none;
+}
+.text .p0:first-child{
+	display: none;
+}
+
 .pic{
 	float: left;
 	margin-top: 30px;
