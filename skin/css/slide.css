@@ -1,0 +1,39 @@
+/**banner**/
+.banner-large-img {
+    width: 530px;
+    height: 233px;
+    overflow: hidden;
+   }
+.banner-large-img li{
+    position: relative;
+}
+.banner-large-img img {
+    width: 530px;
+    height: 233px;
+}
+
+.banner-nav {
+    right:5px;
+    bottom: 2px;
+    position: absolute;
+
+}
+
+.banner-nav li {
+   width: 16px;
+    height: 16px;
+    float: left;
+    background-color: #FFFFFF;
+    font-size: 12px;
+    line-height: 16px;
+    text-align: center;
+    color: #666666;
+    margin-left: 3px;
+}
+
+.banner-nav .on {
+   background-color: #f2890d;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+
