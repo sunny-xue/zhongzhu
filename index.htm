@@ -100,7 +100,7 @@
             <div class="cell" style="width:214px;">
                 <div class="pic1"></div>
                 <div class="line2"></div>
-                {dede:arclist limit='3' titlelen="50"}
+                {dede:arclist typeid='41' limit='3' titlelen="50"}
                 <div class="news-title">
                     <a href='[field:arcurl/]'>[field:title/]</a>
                     <div class="date">[field:stime/]</div>
@@ -115,7 +115,7 @@
                     <div class="title4">集团简介</div>
                     <div class="zhengwen">
                         {dede:sql sql='Select typedir,content from dede_arctype where id=35'}
-                        <a href="/pages/zoujinzhongzhu/jituanjianjie"> [field:content function=' ( strlen("@me")>260 ? cn_substr(html2text("@me"),260)."..." : "@me" ) '/]</a> {/dede:sql}
+                        <a href="/pages/zoujinzhongzhu/jituanjianjie"> &nbsp;&nbsp; &nbsp;&nbsp;[field:content function=' ( strlen("@me")>260 ? cn_substr(html2text("@me"),260)."..." : "@me" ) '/]</a> {/dede:sql}
                     </div>
                 </div>
                 <!--集团简介结束-->
@@ -132,7 +132,7 @@
                     <div class="title4">董事长致辞</div>
                     {dede:sql sql='Select typedir,content from dede_arctype where id=36'}
                     <div class="zhici-pic"><img src="/skins/image/zhici.png" width="112" height="107"></div>
-                    <div class="zhici-bg"> <a href="/pages/zoujinzhongzhu/dongshichangzhici">[field:content function=' ( strlen("@me")>60 ? cn_substr(html2text("@me"),60)."..." : "@me" ) '/] </a></div>
+                    <div class="zhici-bg"> <a href="/pages/zoujinzhongzhu/dongshichangzhici"> &nbsp;&nbsp;&nbsp;[field:content function=' ( strlen("@me")>60 ? cn_substr(html2text("@me"),60)."..." : "@me" ) '/] </a></div>
                     <div class="name">--董事长</div>
                     {/dede:sql}
                 </div>
@@ -148,10 +148,10 @@
                             <div class="title5-box">
                                 <ul>
                                     <li class="title5">
-                                        <button id="fczyNav" class="red">房产置业</button>
+                                      <button id="zcglNav"  class="red">资产管理</button>
                                     </li>
                                     <li class="title5">
-                                        <button id="zcglNav">资产管理</button>
+                                       <button id="fczyNav">房产置业</button>
                                     </li>
                                     <li class="title5">
                                         <button id="wyfwNav">物业服务</button>
@@ -164,15 +164,15 @@
                         </div>
                     </div>
                     <div style="margin-top: 25px;height: 200px;">
-                        <div id="fczy">
-                            {dede:arclist limit='3' type='image' typeid='45' imgwidth='250' imgheight='200' orderby='pubdate'}
+                        <div id="zcgl">
+                            {dede:arclist limit='3' type='image' typeid='46' imgwidth='250' imgheight='200' orderby='pubdate'}
                             <div class="xiangmu" [field:global.autoindex runphp='yes' ] if(@me>2){ @me='style="margin-right:0px;"' ; }else { @me="" ;} [/field:global.autoindex]> [field:imglink/]
                                 <div class="xiangmu-bg">[field:title/]</div>
                             </div>
                             {/dede:arclist}
                         </div>
-                        <div id="zcgl" style="display:none;">
-                            {dede:arclist limit='3' type='image' typeid='46' imgwidth='250' imgheight='200' orderby='pubdate'}
+                        <div id="fczy"  style="display:none;">
+                            {dede:arclist limit='3' type='image' typeid='45' imgwidth='250' imgheight='200' orderby='pubdate'}
                             <div class="xiangmu" [field:global.autoindex runphp='yes' ] if(@me>2){ @me='style="margin-right:0px;"' ; }else { @me="" ;} [/field:global.autoindex]> [field:imglink/]
                                 <div class="xiangmu-bg">[field:title/]</div>
                             </div>

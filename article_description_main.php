@@ -269,4 +269,20 @@ else
 			exit();
 		}
 	}//首图缩略图结束
+
+	//批量更改成动态浏览
+	if($dojob=='cismake')
+	{
+		$addquery  = "";
+		if($sid!=0)
+		{
+			$addquery  = " and id>='$sid' ";
+		}
+		if($eid!=0)
+		{
+			$addquery  = " and id<='$eid' ";
+		}
+		$dsql->ExecuteNoneQuery("Update dede_archives set ismake=-1 where channel='{$channel}' $addquery");
+		echo "完成批量更改任务！";
+	}//批量更改成动态浏览代码结束
 }
