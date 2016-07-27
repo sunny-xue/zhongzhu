@@ -298,7 +298,7 @@
 
         //pageBreakTag
         //分页标识符,默认是_ueditor_page_break_tag_
-        ,pageBreakTag:'#p#副标题#e#'
+        ,pageBreakTag:'#p#'
 
         //autotypeset
         //自动排版参数

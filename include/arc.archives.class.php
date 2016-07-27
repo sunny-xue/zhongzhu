@@ -908,7 +908,30 @@ class Archives
                 }
             }
         }
-        for($i=1;$i<=$totalPage;$i++)
+
+        $total_list=7; //显示7个，3*2+1=7 
+
+if($nowPage >= $total_list) { 
+
+$i = $nowPage-3; //前后6个，（7-1）/ 2=3 
+
+$total_list = $nowPage+3; //前后3个，（7-1）/ 2=3 
+
+if($total_list >= $totalPage) 
+
+$total_list = $totalPage; 
+
+}else{ 
+
+$i=1; 
+
+if($total_list >= $totalPage) 
+
+$total_list = $totalPage; 
+
+} 
+
+for($i;$i<=$total_list;$i++) 
         {
             if($i==1)
             {
@@ -992,8 +1015,32 @@ class Archives
                 $PageList.="<li><a href='".$this->NameFirst."_".$nPage.".".$this->ShortName."'>上一页</a></li>";
             }
         }
-        for($i=1;$i<=$totalPage;$i++)
+
+        $total_list=7; //显示7个，3*2+1=7 
+
+if($nowPage >= $total_list) { 
+
+$i = $nowPage-3; //前后6个，（7-1）/ 2=3 
+
+$total_list = $nowPage+3; //前后3个，（7-1）/ 2=3 
+
+if($total_list >= $totalPage) 
+
+$total_list = $totalPage; 
+
+}else{ 
+
+$i=1; 
+
+if($total_list >= $totalPage) 
+
+$total_list = $totalPage; 
+
+} 
+
+for($i;$i<=$total_list;$i++) 
         {
+
             if($i==1)
             {
                 if($nowPage!=1)
