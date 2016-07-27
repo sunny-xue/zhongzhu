@@ -17,18 +17,20 @@
 	line-height: 24px;
 	min-height: 550px;
 	margin-bottom: 20px;
+	margin-top:20px;
 }
 .text img{
 	max-width: 600px;
+	max-height: 600px;
 }
 
 /**针对老数据 隐藏多标题*/
-.text strong:first-child{
-	display: none;
-}
-.text .p0:first-child{
-	display: none;
-}
+//.text strong:first-child{
+//	display: none;
+//}
+//.text .p0:first-child{
+//	display: none;
+//}
 
 .pic{
 	float: left;
@@ -40,3 +42,33 @@
 	padding: 0px;
 }
 
+
+.dede_pages{
+	padding-left: 210px;
+}
+.dede_pages ul{
+	float:left;
+	padding:12px 0px 12px 16px;
+}
+.dede_pages ul li{
+	float:left;
+	line-height:17px;
+	margin-right:6px;
+	border:1px solid #E9E9E9;
+}
+.dede_pages ul li a{
+	float:left;
+	padding:2px 4px 2px;
+	color:#555;
+	display:block;
+}
+.dede_pages ul li a:hover{
+	color:#690;
+	text-decoration:none;
+	padding:2px 4px 2px;
+}
+.dede_pages ul li.thisclass,
+.dede_pages ul li.thisclass a,.pagebox ul li.thisclass a:hover{
+	background-color:#ebebeb;
+	font-weight:bold;
+}
