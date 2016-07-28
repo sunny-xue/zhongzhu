@@ -64,7 +64,8 @@ function lib_channelartlist(&$ctag,&$refObj)
     //获得类别ID总数的信息
     $typeids = array();
     if($typeid==0 || $typeid=='top') {
-        $tpsql = " reid=0 AND ispart<>2 AND ishidden<>1 AND channeltype>0 ";
+       // $tpsql = " reid=0 AND ispart<>2 AND ishidden<>1 AND channeltype>0 ";
+        $tpsql = " reid=0 AND ishidden<>1 AND channeltype>0 ";
     }
     else
     {

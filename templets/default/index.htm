@@ -67,7 +67,7 @@
             <div class="title2_home">新闻中心</div>
             <div class="title3_home">NEWS</div>
             <div class="more">
-                <a href="/pages/xinwenzhongxin"><img src="/skin/image/more.png" width="64" height="20"></a>
+                <a href="/pages/xinwenzhongxin/jituanxinwen/index.html"><img src="/skin/image/more.png" width="64" height="20"></a>
             </div>
         </div>
         <div class="news-box">
@@ -123,7 +123,7 @@
                 <div class="zixun-box">
                     <div class="title4">行业资讯</div>
                     {dede:arclist limit='5' typeid='42'}
-                    <div class="zixun"><a href='[field:arcurl/]'>>&nbsp;&nbsp;[field:title/]</a></div>
+                    <div class="zixun"><a href='[field:arcurl/]'><i class="arrowIcon"></i>[field:title/]</a></div>
                     {/dede:arclist}
                 </div>
                 <!--行业资讯结束-->
@@ -159,7 +159,7 @@
                                 </ul>
                             </div>
                             <div class="more">
-                                <a href="/pages/xiangmuzhanshi"><img src="skin/image/more.png" width="64" height="20"></a>
+                                <a href="/pages/xiangmuzhanshi/index.html"><img src="skin/image/more.png" width="64" height="20"></a>
                             </div>
                         </div>
                     </div>
@@ -193,7 +193,7 @@
                 <!--企业文化开始-->
                 <div class="wenhua-box">
                     <div class="clearfix">
-                        <div class="title2_home">企业文化</div>
+                        <a href="/pages/qiyewenhua/index.html"><div class="title2_home">企业文化</div></a>
                         <div class="title3_home">CULTURE</div>
                         <div class="line6">
                             <div class="line7"></div>
@@ -205,17 +205,17 @@
                             <div class="kanwu-title">内部刊物</div>
                             <div class="kanwu-text">
                                 {dede:sql sql='Select typedir,content from dede_arctype where id=48'}
-                                <a href="/pages/qiyewenhua/neibukanwu"> [field:content function=' ( strlen("@me")>30 ? cn_substr("@me",30)."..." : "@me" ) '/]</a> {/dede:sql}
+                                <a href="/pages/qiyewenhua/nabukanwu/index.html"> [field:content function=' ( strlen(html2text("@me"))>100 ? cn_substr(html2text("@me"),100)."..." : html2text("@me") ) '/]</a> {/dede:sql}
                             </div>
                         </div>
                     </div>
                     <div class="tiandi-box clearfix">
                         <div class="pic6"></div>
-                        <div class="tiandi cell"><a href="/pages/qiyewenhua/yuangongtiandi/">员工天地</a></div>
+                        <div class="tiandi cell"><a href="/pages/qiyewenhua/yuangongtiandi/index.html">员工天地</a></div>
                     </div>
                     <div class="luntan-box clearfix">
                         <div class="pic7"></div>
-                        <div class="tiandi cell"><a href="/pages/qiyewenhua/qiyeluntan/">企业论坛</a></div>
+                        <div class="tiandi cell"><a href="/pages/qiyewenhua/qiyeluntan/index.html">企业论坛</a></div>
                     </div>
                 </div>
             </div>
@@ -223,7 +223,7 @@
             <!--控股企业开始-->
             <div class="konggu-box">
                 <div class="clearfix">
-                    <div class="title2_home">控股企业</div>
+                    <a href="/pages/zoujinzhongzhu/jituankongguqiye/index.html"><div class="title2_home">控股企业</div></a>
                     <div class="title3_home">HOIDING</div>
                     <div class="line6">
                         <div class="line7"></div>

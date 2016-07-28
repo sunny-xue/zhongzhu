@@ -205,7 +205,7 @@
                             <div class="kanwu-title">内部刊物</div>
                             <div class="kanwu-text">
                                 {dede:sql sql='Select typedir,content from dede_arctype where id=48'}
-                                <a href="/pages/qiyewenhua/neibukanwu"> [field:content function=' ( strlen("@me")>30 ? cn_substr("@me",30)."..." : "@me" ) '/]</a> {/dede:sql}
+                                <a href="/pages/qiyewenhua/neibukanwu"> [field:content function=' ( strlen(html2text("@me"))>30 ? cn_substr(html2text("@me"),30)."..." : html2text("@me") ) '/]</a> {/dede:sql}
                             </div>
                         </div>
                     </div>

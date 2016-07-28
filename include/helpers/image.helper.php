@@ -48,21 +48,24 @@ if ( ! function_exists('ImageResize'))
                 $im = imagecreatefromwbmp($srcFile);
                 break;
         }
-        $srcW=ImageSX($im);
-        $srcH=ImageSY($im);
-        if($srcW<=$toW && $srcH<=$toH ) return TRUE;
-        $toWH=$toW/$toH;
-        $srcWH=$srcW/$srcH;
-        if($toWH<=$srcWH)
-        {
-            $ftoW=$toW;
-            $ftoH=$ftoW*($srcH/$srcW);
+       $srcW=ImageSX($im);
+       $srcH=ImageSY($im);
+       if($srcW<=$toW && $srcH<=$toH ) return TRUE;
+       $toWH=$toW/$toH;
+       $srcWH=$srcW/$srcH;
+       $ftoH=$toH;
+       $ftoW=$toW;
+       if ($toWH<=$srcWH) 
+       {
+            $src_Y = 0;
+            $src_X = ($srcW-$srcH*$toWH)/2;
+            $srcW = $srcH*$toWH;
+        } else {
+            $src_X = 0;
+            $src_Y = ($srcH-$srcW/$toWH)/2;
+            $srcH = $srcW/$toWH;
         }
-        else
-        {
-            $ftoH=$toH;
-            $ftoW=$ftoH*($srcW/$srcH);
-        }
+        
         if($srcW>$toW||$srcH>$toH)
         {
             if(function_exists("imagecreateTRUEcolor"))

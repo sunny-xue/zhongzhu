@@ -1,0 +1,24 @@
+  .topBg {
+        background: url('../images/jituanzhaoping.png') no-repeat;
+        overflow: hidden;
+        width: 100%;
+        height: 130px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    .title4{
+        width:300px;
+        font-weight: 100;
+    }
+    .liebiao
+    {
+        height:5px;
+    }
+
+    .date
+    {
+        width:100px;
+    }
+
+    .margin-top20{margin-top: 20px;}
+    .text{font-size: 14px;}

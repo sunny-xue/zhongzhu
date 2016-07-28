@@ -437,3 +437,20 @@ a:hover {
     color: #c52d2f;
     cursor: pointer;
 }
+
+.arrowIcon{
+    display: inline-block;
+    background: url(../images/arrow_gray.png) no-repeat;
+    width: 14px;
+    height: 14px;
+    vertical-align: middle;
+    overflow: hidden;
+}
+a:hover i{
+    background: url(../images/arrow_hover.png) no-repeat;
+   
+}
+.arrowIcon:hover{
+     background: url(../images/arrow_hover.png) no-repeat;
+   
+}

@@ -186,7 +186,7 @@ if ( ! function_exists('Text2Html'))
         $txt = str_replace("  ", "　", $txt);
         $txt = str_replace("<", "&lt;", $txt);
         $txt = str_replace(">", "&gt;", $txt);
-        $txt = preg_replace("/[\r\n]{1,}/isU", "<br/>\r\n", $txt);
+        $txt = preg_replace("/(\r\n){1,}/isU", "<br/>\r\n", $txt);
         return $txt;
     }
 }
